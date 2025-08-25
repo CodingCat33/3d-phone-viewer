@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        background: transparent;
+        overflow: hidden;
+      }
+      model-viewer {
+        width: 400px;
+        height: 800px;
+        display: block;
+        margin: auto;
+        background: transparent;
+        --model-viewer-background-color: transparent;
+        transition: transform 0.3s, box-shadow 0.3s;
+        border-radius: 18px;
+      }
+      model-viewer:hover {
+        transform: scale(1.04);
+        box-shadow: 0 0 36px 2px #00f2ff99;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <model-viewer 
+      src="https://poly.pizza/asset/2y3FzYv2w3/scene.glb"
+      alt="A 3D model of a smartphone"
+      shadow-intensity="1"
+      camera-controls
+      auto-rotate
+      ar
+      style="background: transparent; --model-viewer-background-color: transparent;"
+    ></model-viewer>
+  </body>
+</html>
